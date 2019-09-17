@@ -6,14 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
   submitButton.addEventListener("click", function(e){
     console.log("don't refresh page")
     e.preventDefault();
+
+
+
   // set value of task to user input
-
-
+  // add task to page
     const task = document.querySelector("#new-task-description").value
     let toDoList = document.querySelector("#tasks")
     let li = document.createElement('li')
     let addTask = toDoList.appendChild(li)
     addTask.innerText = task
+    
   })
 
 });
@@ -21,15 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // [O] As a user, I should be able to click some form of a submit button.
 
-// [ ] As a user, the task string that I provided should appear on the DOM after the submit button has been activated.
+// [X] As a user, the task string that I provided should appear on the DOM after the submit button has been activated.
 
 
 // [X] As a user, I should be able to type a task into the input field.
-
-// document.querySelector("#tasks")
-// document.querySelector("#tasks > li:nth-child(1)")
-// to
-
-// let toDoList = document.querySelector("#tasks")
-// let li = document.createElement('li')
-// const addTask = () => { toDoList.appendChild(li)}
