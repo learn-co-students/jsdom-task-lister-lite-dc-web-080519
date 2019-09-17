@@ -12,6 +12,11 @@ function subFunc(e){
   let taskList = document.querySelector("#tasks");
   let taskEntry = document.createElement("li");
   taskEntry.innerText = task;
+
+  let deleteButton = document.createElement("button");
+  deleteButton.innerText = "X";
+  deleteButton.addEventListener("click", () => { taskEntry.remove() });
+  taskEntry.appendChild(deleteButton);
+
   taskList.appendChild(taskEntry);
-  
 }
